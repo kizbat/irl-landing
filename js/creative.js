@@ -45,4 +45,14 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    mixpanel.track("display page");
+
+    $('#mc-embedded-subscribe-top').on('click', function(){
+        mixpanel.track("subscribe", {from:"top"});
+    });
+
+    $('#mc-embedded-subscribe-bottom').on('click', function(){
+        mixpanel.track("subscribe", {from:"bottom"});
+    });
+
 })(jQuery); // End of use strict
